@@ -141,7 +141,10 @@ namespace pikpo_job
         {
             comboBoxLogin.DataSource = (Model.getUsersElems("Логин"));
             comboBoxPassword.DataSource = (Model.getUsersElems("Пароль"));
-            dataTable.DataSource = Model.getUsers();
+            dataTable.DataSource = Model.getUsers(
+                checkBoxLoginUsers.Checked,checkBoxPassUsers.Checked,
+                checkBoxDostupUsers.Checked,comboBoxLoginUsers.Text.ToString(),
+                comboBoxPassUsers.Text.ToString(),numericDostupUsers.Value.ToString());
             dataTable.Visible = true;
             panelTables.Visible = false;
             label2.Visible = true;
@@ -165,7 +168,11 @@ namespace pikpo_job
         {
             comboBoxArticuleOrders.DataSource = Model.getWaresElems("Артикул");
             comboBoxPhoneOrders.DataSource = Model.getClientsElems("Телефон");
-            dataTable.DataSource = Model.getOrders();
+            dataTable.DataSource = Model.getOrders(
+                checkBoxPhoneOrders.Checked,checkBoxArticuleOrders.Checked,
+                checkBoxStatusOrders.Checked,checkBoxCountOrders.Checked,
+                comboBoxPhoneOrdersSort.Text.ToString(),comboBoxArticuleOrdersSort.Text.ToString(),
+                numericOrdersSort.Value.ToString(),numericCountOrdersSort.Value.ToString());
             dataTable.Visible = true;
             panelTables.Visible = false;
             label2.Visible = true;
@@ -190,7 +197,11 @@ namespace pikpo_job
             comboBoxNameWares.DataSource = Model.getWaresElems("Наименование");
             comboBoxArticuleWares.DataSource = Model.getWaresElems("Артикул");
             comboBoxPrice.DataSource = Model.getWaresElems("Цена");
-            dataTable.DataSource = Model.getWares();
+            dataTable.DataSource = Model.getWares(
+                checkBoxArticuleWares.Checked,checkBoxPhoneWares.Checked,
+                checkBoxCountWares.Checked,checkBoxPriceWares.Checked,
+                comboBoxArticuleWaresSort.Text.ToString(),comboBoxNameWaresSort.Text.ToString(),
+                numericCountWaresSort.Value.ToString(), comboBoxPriceWaresSort.Text.ToString());
             dataTable.Visible = true;
             panelTables.Visible = false;
             label2.Visible = true;
@@ -215,7 +226,12 @@ namespace pikpo_job
             comboBoxPhone.DataSource = Model.getClientsElems("Телефон");
             comboBoxBirthday.DataSource = Model.getClientsElems("ДатаРождения");
             comboBoxEmail.DataSource = Model.getClientsElems("Email");
-            dataTable.DataSource = Model.getClients();
+            dataTable.DataSource = Model.getClients(
+                checkBoxPhoneClients.Checked,checkBoxNameClients.Checked,
+                checkBoxPrivClients.Checked,checkBoxBirthdayClients.Checked,
+                checkBoxEmailClients.Checked,comboBoxPhoneClientsSort.Text.ToString(),
+                comboBoxNameClientsSort.Text.ToString(),numericPrivClientsSort.Value.ToString(),
+                comboBoxBirthClientsSort.Text.ToString(),comboBoxEmailClientsSort.Text.ToString());
             dataTable.Visible = true;
             panelTables.Visible = false;
             label2.Visible = true;
@@ -496,6 +512,31 @@ namespace pikpo_job
         private void dataTable_DataBindingComplete(object sender, DataGridViewBindingCompleteEventArgs e)
         {
             dataTable.ClearSelection();
+        }
+
+        private void buttonSortUsers_Click(object sender, EventArgs e)
+        {
+            usersTableWindow(sender,e);
+        }
+
+        private void buttonOrdersSort_Click(object sender, EventArgs e)
+        {
+            ordersTableWindow(sender, e);
+        }
+
+        private void buttonWaresSort_Click(object sender, EventArgs e)
+        {
+            waresTableWindow(sender, e);
+        }
+
+        private void buttonClientsSort_Click(object sender, EventArgs e)
+        {
+            clientsTableWindow(sender, e);
+        }
+
+        private void buttonExcel_Click(object sender, EventArgs e)
+        {
+            Model.expToExcel();
         }
     }
 }

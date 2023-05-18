@@ -147,11 +147,11 @@ class DataBase : DataBaseInterface
         SQLiteDataReader dr = _cmd.ExecuteReader();
         while (dr.Read())
         {
-            if (columname == "Номер")
+            if (columname == "Номер" && data.Contains(dr[1].ToString())==false)
             {
                 data.Add(dr[1].ToString());
             }
-            if (columname == "Артикул")
+            if (columname == "Артикул" && data.Contains(dr[2].ToString()) == false)
             {
                 data.Add(dr[2].ToString());
             }
@@ -168,11 +168,11 @@ class DataBase : DataBaseInterface
         SQLiteDataReader dr = _cmd.ExecuteReader();
         while (dr.Read())
         {
-            if (columname == "Логин")
+            if (columname == "Логин" && data.Contains(dr[1].ToString()) == false)
             {
                 data.Add(dr[1].ToString());
             }
-            if (columname == "Пароль")
+            if (columname == "Пароль" && data.Contains(dr[2].ToString()) == false)
             {
                 data.Add(dr[2].ToString());
             }
@@ -188,15 +188,15 @@ class DataBase : DataBaseInterface
         SQLiteDataReader dr = _cmd.ExecuteReader();
         while (dr.Read())
         {
-            if (columname == "Артикул")
+            if (columname == "Артикул" && data.Contains(dr[1].ToString()) == false)
             {
                 data.Add(dr[1].ToString());
             }
-            if (columname == "Наименование")
+            if (columname == "Наименование" && data.Contains(dr[2].ToString()) == false)
             {
                 data.Add(dr[2].ToString());
             }
-            if (columname == "Цена")
+            if (columname == "Цена" && data.Contains(dr[4].ToString()) == false)
             {
                 data.Add(dr[4].ToString());
             }
@@ -212,19 +212,19 @@ class DataBase : DataBaseInterface
         SQLiteDataReader dr = _cmd.ExecuteReader();
         while (dr.Read())
         {
-            if (columname == "Телефон")
+            if (columname == "Телефон" && data.Contains(dr[1].ToString()) == false)
             {
                 data.Add(dr[1].ToString());
             }
-            if (columname == "Имя")
+            if (columname == "Имя" && data.Contains(dr[2].ToString()) == false)
             {
                 data.Add(dr[2].ToString());
             }
-            if (columname == "ДатаРождения")
+            if (columname == "ДатаРождения" && data.Contains(dr[4].ToString()) == false)
             {
                 data.Add(dr[4].ToString());
             }
-            if (columname == "Email")
+            if (columname == "Email" && data.Contains(dr[5].ToString()) == false)
             {
                 data.Add(dr[5].ToString());
             }

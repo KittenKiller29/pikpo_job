@@ -22,9 +22,10 @@ public class Model
     public System.EventHandler _observselectchangeclients;
     DataBaseInterface DataBase = new DataBase();
     User CurrentUser=new User();
+    ExcelExp Exporter = new ExcelExp();
     private static string _tablename = "";
     public static string _inf = "";
-    static DataTable data = new DataTable();
+    static DataTable _dt = new DataTable();
     public void AuthIn(string login,string password)
     {
         DataTable _dt=DataBase.getUsersTable();
@@ -70,21 +71,225 @@ public class Model
         _tablename = "Клиенты";
         _observopenclients.Invoke(this, null);
     }
-    public DataTable getUsers()
+    public DataTable getUsers(bool b1, bool b2, bool b3, string s1, string s2, string s3)
     {
-        return DataBase.getUsersTable();
+        _dt = DataBase.getUsersTable();
+        DataTable tmp = _dt.Clone();
+        if (b1)
+        {
+            foreach (DataRow str in _dt.Rows)
+            {
+                if (s1 == str[1].ToString())
+                {
+                    DataRow _val = str;
+                    tmp.ImportRow(_val);
+                }
+            }
+            _dt = tmp;
+            tmp = _dt.Clone();
+        }
+        if (b2)
+        {
+            foreach (DataRow str in _dt.Rows)
+            {
+                if (s2 == str[2].ToString())
+                {
+                    tmp.ImportRow(str);
+                }
+            }
+            _dt = tmp;
+            tmp = _dt.Clone();
+        }
+        
+        if (b3)
+        {
+            foreach (DataRow str in _dt.Rows)
+            {
+                if (s3 == str[3].ToString())
+                {
+                    tmp.ImportRow(str);
+                }
+            }
+            _dt = tmp;
+        }
+        return _dt;
     }
-    public DataTable getOrders()
+    public DataTable getOrders(bool b1,bool b2,bool b3,bool b4,string s1,string s2,string s3,string s4)
     {
-        return DataBase.getOrdersTable();
+        _dt = DataBase.getOrdersTable();
+        DataTable tmp = _dt.Clone();
+        if (b1)
+        {
+            foreach (DataRow str in _dt.Rows)
+            {
+                if (s1 == str[1].ToString())
+                {
+                    DataRow _val = str;
+                    tmp.ImportRow(_val);
+                }
+            }
+            _dt = tmp;
+            tmp = _dt.Clone();
+        }
+        if (b2)
+        {
+            foreach (DataRow str in _dt.Rows)
+            {
+                if (s2 == str[2].ToString())
+                {
+                    tmp.ImportRow(str);
+                }
+            }
+            _dt = tmp;
+            tmp = _dt.Clone();
+        }
+        if (b3)
+        {
+            foreach (DataRow str in _dt.Rows)
+            {
+                if (s3 == str[3].ToString())
+                {
+                    tmp.ImportRow(str);
+                }
+            }
+            _dt = tmp;
+            tmp = _dt.Clone();
+        }
+
+        if (b4)
+        {
+            foreach (DataRow str in _dt.Rows)
+            {
+                if (s4 == str[4].ToString())
+                {
+                    tmp.ImportRow(str);
+                }
+            }
+            _dt = tmp;
+        }
+        return _dt;
     }
-    public DataTable getWares()
+    public DataTable getWares(bool b1,bool b2,bool b3,bool b4,string s1,string s2,string s3,string s4)
     {
-        return DataBase.getWaresTable();
+        _dt = DataBase.getWaresTable();
+        DataTable tmp = _dt.Clone();
+        if (b1)
+        {
+            foreach (DataRow str in _dt.Rows)
+            {
+                if (s1 == str[1].ToString())
+                {
+                    DataRow _val = str;
+                    tmp.ImportRow(_val);
+                }
+            }
+            _dt = tmp;
+            tmp = _dt.Clone();
+        }
+        if (b2)
+        {
+            foreach (DataRow str in _dt.Rows)
+            {
+                if (s2 == str[2].ToString())
+                {
+                    tmp.ImportRow(str);
+                }
+            }
+            _dt = tmp;
+            tmp = _dt.Clone();
+        }
+        if (b3)
+        {
+            foreach (DataRow str in _dt.Rows)
+            {
+                if (s3 == str[3].ToString())
+                {
+                    tmp.ImportRow(str);
+                }
+            }
+            _dt = tmp;
+            tmp = _dt.Clone();
+        }
+
+        if (b4)
+        {
+            foreach (DataRow str in _dt.Rows)
+            {
+                if (s4 == str[4].ToString())
+                {
+                    tmp.ImportRow(str);
+                }
+            }
+            _dt = tmp;
+        }
+        return _dt;
     }
-    public DataTable getClients()
+    public DataTable getClients(bool b1,bool b2,bool b3,bool b4,bool b5,string s1,string s2,string s3,string s4,string s5)
     {
-        return DataBase.getClientsTable();
+        _dt = DataBase.getClientsTable();
+        DataTable tmp = _dt.Clone();
+        if (b1)
+        {
+            foreach (DataRow str in _dt.Rows)
+            {
+                if (s1 == str[1].ToString())
+                {
+                    DataRow _val = str;
+                    tmp.ImportRow(_val);
+                }
+            }
+            _dt = tmp;
+            tmp = _dt.Clone();
+        }
+        if (b2)
+        {
+            foreach (DataRow str in _dt.Rows)
+            {
+                if (s2 == str[2].ToString())
+                {
+                    tmp.ImportRow(str);
+                }
+            }
+            _dt = tmp;
+            tmp = _dt.Clone();
+        }
+        if (b3)
+        {
+            foreach (DataRow str in _dt.Rows)
+            {
+                if (s3 == str[3].ToString())
+                {
+                    tmp.ImportRow(str);
+                }
+            }
+            _dt = tmp;
+            tmp = _dt.Clone();
+        }
+        if (b4)
+        {
+            foreach (DataRow str in _dt.Rows)
+            {
+                if (s4 == str[4].ToString())
+                {
+                    tmp.ImportRow(str);
+                }
+            }
+            _dt = tmp;
+            tmp = _dt.Clone();
+        }
+
+        if (b5)
+        {
+            foreach (DataRow str in _dt.Rows)
+            {
+                if (s5 == str[5].ToString())
+                {
+                    tmp.ImportRow(str);
+                }
+            }
+            _dt = tmp;
+        }
+        return _dt;
     }
     public void insertInUsers(string s1,string s2,string s3)
     {
@@ -157,7 +362,6 @@ public class Model
         if (s1 == "" || s2 == "" || s3 == "" || DataBase.selectInUsers(s1, s2, s3) == -1) ;
         else
         {
-            DataTable _dt = DataBase.getUsersTable();
             int count = 0;
             foreach (DataRow str in _dt.Rows)
             {
@@ -177,7 +381,7 @@ public class Model
         if (s1 == "" || s2 == "" || s3 == "" || s4=="" || DataBase.selectInOrders(s1, s2, s3,s4) == -1) ;
         else
         {
-            DataTable _dt = DataBase.getOrdersTable();
+           
             int count = 0;
             foreach (DataRow str in _dt.Rows)
             {
@@ -197,7 +401,7 @@ public class Model
         if (s1 == "" || s2 == "" || s3 == "" || s4=="" || DataBase.selectInWares(s1, s2, s3,s4) == -1) ;
         else
         {
-            DataTable _dt = DataBase.getWaresTable();
+            
             int count = 0;
             foreach (DataRow str in _dt.Rows)
             {
@@ -217,7 +421,7 @@ public class Model
         if (s1 == "" || s2 == "" || s3 == "" || s4=="" || s5=="" || DataBase.selectInClients(s1, s2, s3,s4,s5) == -1) ;
         else
         {
-            DataTable _dt = DataBase.getClientsTable();
+            
             int count = 0;
             foreach (DataRow str in _dt.Rows)
             {
@@ -415,5 +619,16 @@ public class Model
         return DataBase.getElemsUsers(columname);
     }
 
-
+    public void expToExcel()
+    {
+        if(_tablename=="Пользователи")
+            Exporter.expUsers(_dt);
+        if (_tablename == "Клиенты")
+            Exporter.expClients(_dt);
+        if (_tablename == "Товары")
+            Exporter.expWares(_dt);
+        if (_tablename == "Заказы")
+            Exporter.expOrders(_dt);
+    }
+   
 }

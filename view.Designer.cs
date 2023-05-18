@@ -91,15 +91,6 @@ namespace pikpo_job
             this.buttonWaresUpdate = new System.Windows.Forms.Button();
             this.buttonWaresSelect = new System.Windows.Forms.Button();
             this.panelOrdersSort = new System.Windows.Forms.Panel();
-            this.panelSortUsers = new System.Windows.Forms.Panel();
-            this.buttonSortUsers = new System.Windows.Forms.Button();
-            this.checkBoxDostupUsers = new System.Windows.Forms.CheckBox();
-            this.checkBoxPassUsers = new System.Windows.Forms.CheckBox();
-            this.checkBoxLoginUsers = new System.Windows.Forms.CheckBox();
-            this.numericDostupUsers = new System.Windows.Forms.NumericUpDown();
-            this.comboBoxPassUsers = new System.Windows.Forms.ComboBox();
-            this.comboBoxLoginUsers = new System.Windows.Forms.ComboBox();
-            this.label24 = new System.Windows.Forms.Label();
             this.numericCountOrdersSort = new System.Windows.Forms.NumericUpDown();
             this.buttonOrdersSort = new System.Windows.Forms.Button();
             this.checkBoxCountOrders = new System.Windows.Forms.CheckBox();
@@ -110,6 +101,15 @@ namespace pikpo_job
             this.comboBoxArticuleOrdersSort = new System.Windows.Forms.ComboBox();
             this.comboBoxPhoneOrdersSort = new System.Windows.Forms.ComboBox();
             this.label22 = new System.Windows.Forms.Label();
+            this.panelSortUsers = new System.Windows.Forms.Panel();
+            this.buttonSortUsers = new System.Windows.Forms.Button();
+            this.checkBoxDostupUsers = new System.Windows.Forms.CheckBox();
+            this.checkBoxPassUsers = new System.Windows.Forms.CheckBox();
+            this.checkBoxLoginUsers = new System.Windows.Forms.CheckBox();
+            this.numericDostupUsers = new System.Windows.Forms.NumericUpDown();
+            this.comboBoxPassUsers = new System.Windows.Forms.ComboBox();
+            this.comboBoxLoginUsers = new System.Windows.Forms.ComboBox();
+            this.label24 = new System.Windows.Forms.Label();
             this.panelOrders = new System.Windows.Forms.Panel();
             this.numericCountOrders = new System.Windows.Forms.NumericUpDown();
             this.label12 = new System.Windows.Forms.Label();
@@ -165,10 +165,10 @@ namespace pikpo_job
             this.panelWares.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericCountWares)).BeginInit();
             this.panelOrdersSort.SuspendLayout();
-            this.panelSortUsers.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numericDostupUsers)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericCountOrdersSort)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericOrdersSort)).BeginInit();
+            this.panelSortUsers.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numericDostupUsers)).BeginInit();
             this.panelOrders.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericCountOrders)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericStatusOrder)).BeginInit();
@@ -889,106 +889,11 @@ namespace pikpo_job
             this.panelOrdersSort.Controls.Add(this.comboBoxArticuleOrdersSort);
             this.panelOrdersSort.Controls.Add(this.comboBoxPhoneOrdersSort);
             this.panelOrdersSort.Controls.Add(this.label22);
-            this.panelOrdersSort.Location = new System.Drawing.Point(714, 335);
+            this.panelOrdersSort.Location = new System.Drawing.Point(693, 302);
             this.panelOrdersSort.Name = "panelOrdersSort";
             this.panelOrdersSort.Size = new System.Drawing.Size(367, 240);
             this.panelOrdersSort.TabIndex = 47;
             this.panelOrdersSort.Visible = false;
-            // 
-            // panelSortUsers
-            // 
-            this.panelSortUsers.BackColor = System.Drawing.Color.Transparent;
-            this.panelSortUsers.Controls.Add(this.buttonSortUsers);
-            this.panelSortUsers.Controls.Add(this.checkBoxDostupUsers);
-            this.panelSortUsers.Controls.Add(this.checkBoxPassUsers);
-            this.panelSortUsers.Controls.Add(this.checkBoxLoginUsers);
-            this.panelSortUsers.Controls.Add(this.numericDostupUsers);
-            this.panelSortUsers.Controls.Add(this.comboBoxPassUsers);
-            this.panelSortUsers.Controls.Add(this.comboBoxLoginUsers);
-            this.panelSortUsers.Controls.Add(this.label24);
-            this.panelSortUsers.Location = new System.Drawing.Point(700, 295);
-            this.panelSortUsers.Name = "panelSortUsers";
-            this.panelSortUsers.Size = new System.Drawing.Size(367, 213);
-            this.panelSortUsers.TabIndex = 47;
-            this.panelSortUsers.Visible = false;
-            // 
-            // buttonSortUsers
-            // 
-            this.buttonSortUsers.BackColor = System.Drawing.SystemColors.ButtonFace;
-            this.buttonSortUsers.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.buttonSortUsers.Location = new System.Drawing.Point(194, 152);
-            this.buttonSortUsers.Name = "buttonSortUsers";
-            this.buttonSortUsers.Size = new System.Drawing.Size(151, 48);
-            this.buttonSortUsers.TabIndex = 28;
-            this.buttonSortUsers.Text = "Обновить";
-            this.buttonSortUsers.UseVisualStyleBackColor = false;
-            // 
-            // checkBoxDostupUsers
-            // 
-            this.checkBoxDostupUsers.AutoSize = true;
-            this.checkBoxDostupUsers.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.checkBoxDostupUsers.Location = new System.Drawing.Point(9, 118);
-            this.checkBoxDostupUsers.Name = "checkBoxDostupUsers";
-            this.checkBoxDostupUsers.Size = new System.Drawing.Size(97, 29);
-            this.checkBoxDostupUsers.TabIndex = 44;
-            this.checkBoxDostupUsers.Text = "Доступ";
-            this.checkBoxDostupUsers.UseVisualStyleBackColor = true;
-            // 
-            // checkBoxPassUsers
-            // 
-            this.checkBoxPassUsers.AutoSize = true;
-            this.checkBoxPassUsers.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.checkBoxPassUsers.Location = new System.Drawing.Point(9, 84);
-            this.checkBoxPassUsers.Name = "checkBoxPassUsers";
-            this.checkBoxPassUsers.Size = new System.Drawing.Size(101, 29);
-            this.checkBoxPassUsers.TabIndex = 43;
-            this.checkBoxPassUsers.Text = "Пароль";
-            this.checkBoxPassUsers.UseVisualStyleBackColor = true;
-            // 
-            // checkBoxLoginUsers
-            // 
-            this.checkBoxLoginUsers.AutoSize = true;
-            this.checkBoxLoginUsers.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.checkBoxLoginUsers.Location = new System.Drawing.Point(9, 50);
-            this.checkBoxLoginUsers.Name = "checkBoxLoginUsers";
-            this.checkBoxLoginUsers.Size = new System.Drawing.Size(87, 29);
-            this.checkBoxLoginUsers.TabIndex = 29;
-            this.checkBoxLoginUsers.Text = "Логин";
-            this.checkBoxLoginUsers.UseVisualStyleBackColor = true;
-            // 
-            // numericDostupUsers
-            // 
-            this.numericDostupUsers.Location = new System.Drawing.Point(195, 118);
-            this.numericDostupUsers.Name = "numericDostupUsers";
-            this.numericDostupUsers.Size = new System.Drawing.Size(150, 27);
-            this.numericDostupUsers.TabIndex = 42;
-            // 
-            // comboBoxPassUsers
-            // 
-            this.comboBoxPassUsers.FormattingEnabled = true;
-            this.comboBoxPassUsers.Location = new System.Drawing.Point(195, 84);
-            this.comboBoxPassUsers.Name = "comboBoxPassUsers";
-            this.comboBoxPassUsers.Size = new System.Drawing.Size(151, 28);
-            this.comboBoxPassUsers.TabIndex = 40;
-            // 
-            // comboBoxLoginUsers
-            // 
-            this.comboBoxLoginUsers.FormattingEnabled = true;
-            this.comboBoxLoginUsers.Location = new System.Drawing.Point(195, 50);
-            this.comboBoxLoginUsers.Name = "comboBoxLoginUsers";
-            this.comboBoxLoginUsers.Size = new System.Drawing.Size(151, 28);
-            this.comboBoxLoginUsers.TabIndex = 38;
-            // 
-            // label24
-            // 
-            this.label24.AutoSize = true;
-            this.label24.BackColor = System.Drawing.Color.Transparent;
-            this.label24.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
-            this.label24.Location = new System.Drawing.Point(3, 7);
-            this.label24.Name = "label24";
-            this.label24.Size = new System.Drawing.Size(146, 31);
-            this.label24.TabIndex = 37;
-            this.label24.Text = "Сортировка";
             // 
             // numericCountOrdersSort
             // 
@@ -1007,6 +912,7 @@ namespace pikpo_job
             this.buttonOrdersSort.TabIndex = 28;
             this.buttonOrdersSort.Text = "Обновить";
             this.buttonOrdersSort.UseVisualStyleBackColor = false;
+            this.buttonOrdersSort.Click += new System.EventHandler(this.buttonOrdersSort_Click);
             // 
             // checkBoxCountOrders
             // 
@@ -1085,6 +991,102 @@ namespace pikpo_job
             this.label22.Size = new System.Drawing.Size(146, 31);
             this.label22.TabIndex = 37;
             this.label22.Text = "Сортировка";
+            // 
+            // panelSortUsers
+            // 
+            this.panelSortUsers.BackColor = System.Drawing.Color.Transparent;
+            this.panelSortUsers.Controls.Add(this.buttonSortUsers);
+            this.panelSortUsers.Controls.Add(this.checkBoxDostupUsers);
+            this.panelSortUsers.Controls.Add(this.checkBoxPassUsers);
+            this.panelSortUsers.Controls.Add(this.checkBoxLoginUsers);
+            this.panelSortUsers.Controls.Add(this.numericDostupUsers);
+            this.panelSortUsers.Controls.Add(this.comboBoxPassUsers);
+            this.panelSortUsers.Controls.Add(this.comboBoxLoginUsers);
+            this.panelSortUsers.Controls.Add(this.label24);
+            this.panelSortUsers.Location = new System.Drawing.Point(700, 270);
+            this.panelSortUsers.Name = "panelSortUsers";
+            this.panelSortUsers.Size = new System.Drawing.Size(367, 213);
+            this.panelSortUsers.TabIndex = 47;
+            this.panelSortUsers.Visible = false;
+            // 
+            // buttonSortUsers
+            // 
+            this.buttonSortUsers.BackColor = System.Drawing.SystemColors.ButtonFace;
+            this.buttonSortUsers.Font = new System.Drawing.Font("Segoe UI", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.buttonSortUsers.Location = new System.Drawing.Point(194, 152);
+            this.buttonSortUsers.Name = "buttonSortUsers";
+            this.buttonSortUsers.Size = new System.Drawing.Size(151, 48);
+            this.buttonSortUsers.TabIndex = 28;
+            this.buttonSortUsers.Text = "Обновить";
+            this.buttonSortUsers.UseVisualStyleBackColor = false;
+            this.buttonSortUsers.Click += new System.EventHandler(this.buttonSortUsers_Click);
+            // 
+            // checkBoxDostupUsers
+            // 
+            this.checkBoxDostupUsers.AutoSize = true;
+            this.checkBoxDostupUsers.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.checkBoxDostupUsers.Location = new System.Drawing.Point(9, 118);
+            this.checkBoxDostupUsers.Name = "checkBoxDostupUsers";
+            this.checkBoxDostupUsers.Size = new System.Drawing.Size(97, 29);
+            this.checkBoxDostupUsers.TabIndex = 44;
+            this.checkBoxDostupUsers.Text = "Доступ";
+            this.checkBoxDostupUsers.UseVisualStyleBackColor = true;
+            // 
+            // checkBoxPassUsers
+            // 
+            this.checkBoxPassUsers.AutoSize = true;
+            this.checkBoxPassUsers.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.checkBoxPassUsers.Location = new System.Drawing.Point(9, 84);
+            this.checkBoxPassUsers.Name = "checkBoxPassUsers";
+            this.checkBoxPassUsers.Size = new System.Drawing.Size(101, 29);
+            this.checkBoxPassUsers.TabIndex = 43;
+            this.checkBoxPassUsers.Text = "Пароль";
+            this.checkBoxPassUsers.UseVisualStyleBackColor = true;
+            // 
+            // checkBoxLoginUsers
+            // 
+            this.checkBoxLoginUsers.AutoSize = true;
+            this.checkBoxLoginUsers.Font = new System.Drawing.Font("Segoe UI", 10.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.checkBoxLoginUsers.Location = new System.Drawing.Point(9, 50);
+            this.checkBoxLoginUsers.Name = "checkBoxLoginUsers";
+            this.checkBoxLoginUsers.Size = new System.Drawing.Size(87, 29);
+            this.checkBoxLoginUsers.TabIndex = 29;
+            this.checkBoxLoginUsers.Text = "Логин";
+            this.checkBoxLoginUsers.UseVisualStyleBackColor = true;
+            // 
+            // numericDostupUsers
+            // 
+            this.numericDostupUsers.Location = new System.Drawing.Point(195, 118);
+            this.numericDostupUsers.Name = "numericDostupUsers";
+            this.numericDostupUsers.Size = new System.Drawing.Size(150, 27);
+            this.numericDostupUsers.TabIndex = 42;
+            // 
+            // comboBoxPassUsers
+            // 
+            this.comboBoxPassUsers.FormattingEnabled = true;
+            this.comboBoxPassUsers.Location = new System.Drawing.Point(195, 84);
+            this.comboBoxPassUsers.Name = "comboBoxPassUsers";
+            this.comboBoxPassUsers.Size = new System.Drawing.Size(151, 28);
+            this.comboBoxPassUsers.TabIndex = 40;
+            // 
+            // comboBoxLoginUsers
+            // 
+            this.comboBoxLoginUsers.FormattingEnabled = true;
+            this.comboBoxLoginUsers.Location = new System.Drawing.Point(195, 50);
+            this.comboBoxLoginUsers.Name = "comboBoxLoginUsers";
+            this.comboBoxLoginUsers.Size = new System.Drawing.Size(151, 28);
+            this.comboBoxLoginUsers.TabIndex = 38;
+            // 
+            // label24
+            // 
+            this.label24.AutoSize = true;
+            this.label24.BackColor = System.Drawing.Color.Transparent;
+            this.label24.Font = new System.Drawing.Font("Segoe UI", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point);
+            this.label24.Location = new System.Drawing.Point(3, 7);
+            this.label24.Name = "label24";
+            this.label24.Size = new System.Drawing.Size(146, 31);
+            this.label24.TabIndex = 37;
+            this.label24.Text = "Сортировка";
             // 
             // panelOrders
             // 
@@ -1243,6 +1245,7 @@ namespace pikpo_job
             this.buttonExcel.Text = "Excel";
             this.buttonExcel.UseVisualStyleBackColor = false;
             this.buttonExcel.Visible = false;
+            this.buttonExcel.Click += new System.EventHandler(this.buttonExcel_Click);
             // 
             // panelPrototype
             // 
@@ -1322,6 +1325,7 @@ namespace pikpo_job
             this.buttonClientsSort.TabIndex = 28;
             this.buttonClientsSort.Text = "Обновить";
             this.buttonClientsSort.UseVisualStyleBackColor = false;
+            this.buttonClientsSort.Click += new System.EventHandler(this.buttonClientsSort_Click);
             // 
             // checkBoxEmailClients
             // 
@@ -1441,7 +1445,7 @@ namespace pikpo_job
             this.panelSortWares.Controls.Add(this.comboBoxPriceWaresSort);
             this.panelSortWares.Controls.Add(this.comboBoxArticuleWaresSort);
             this.panelSortWares.Controls.Add(this.label23);
-            this.panelSortWares.Location = new System.Drawing.Point(721, 379);
+            this.panelSortWares.Location = new System.Drawing.Point(690, 379);
             this.panelSortWares.Name = "panelSortWares";
             this.panelSortWares.Size = new System.Drawing.Size(367, 239);
             this.panelSortWares.TabIndex = 47;
@@ -1457,6 +1461,7 @@ namespace pikpo_job
             this.buttonWaresSort.TabIndex = 28;
             this.buttonWaresSort.Text = "Обновить";
             this.buttonWaresSort.UseVisualStyleBackColor = false;
+            this.buttonWaresSort.Click += new System.EventHandler(this.buttonWaresSort_Click);
             // 
             // checkBoxPriceWares
             // 
@@ -1605,11 +1610,11 @@ namespace pikpo_job
             ((System.ComponentModel.ISupportInitialize)(this.numericCountWares)).EndInit();
             this.panelOrdersSort.ResumeLayout(false);
             this.panelOrdersSort.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numericCountOrdersSort)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.numericOrdersSort)).EndInit();
             this.panelSortUsers.ResumeLayout(false);
             this.panelSortUsers.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericDostupUsers)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericCountOrdersSort)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.numericOrdersSort)).EndInit();
             this.panelOrders.ResumeLayout(false);
             this.panelOrders.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numericCountOrders)).EndInit();
